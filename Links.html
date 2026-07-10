@@ -1,0 +1,394 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Adinexis | Quick Links</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+<script src="js/script.js"></script>
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:'Inter',sans-serif;
+}
+
+body{
+
+background:linear-gradient(-45deg,#0A66FF,#09162f,#0b234f,#000814);
+background-size:400% 400%;
+animation:bgMove 15s ease infinite;
+overflow-x:hidden;
+min-height:100vh;
+display:flex;
+justify-content:center;
+align-items:center;
+padding:40px;
+color:white;
+
+}
+
+@keyframes bgMove{
+0%{background-position:0% 50%;}
+50%{background-position:100% 50%;}
+100%{background-position:0% 50%;}
+}
+
+/* Floating blobs */
+
+.blob{
+position:absolute;
+border-radius:50%;
+filter:blur(90px);
+opacity:.35;
+animation:float 15s infinite alternate;
+}
+
+.blob:nth-child(1){
+width:300px;
+height:300px;
+background:#0A66FF;
+top:-80px;
+left:-80px;
+}
+
+.blob:nth-child(2){
+width:260px;
+height:260px;
+background:#00BFFF;
+right:-50px;
+bottom:-50px;
+animation-duration:18s;
+}
+
+@keyframes float{
+
+from{
+transform:translateY(0px) translateX(0px);
+}
+
+to{
+transform:translateY(60px) translateX(40px);
+}
+
+}
+
+.container{
+
+width:100%;
+max-width:900px;
+z-index:5;
+
+}
+
+.card{
+
+background:rgba(255,255,255,.08);
+backdrop-filter:blur(18px);
+border:1px solid rgba(255,255,255,.15);
+border-radius:30px;
+padding:50px;
+box-shadow:0 25px 60px rgba(0,0,0,.4);
+animation:fade 1s ease;
+
+}
+
+@keyframes fade{
+
+from{
+opacity:0;
+transform:translateY(40px);
+}
+
+to{
+opacity:1;
+transform:translateY(0px);
+}
+
+}
+
+.logo{
+
+width:120px;
+display:block;
+margin:auto;
+
+}
+
+@keyframes spinIn{
+
+from{
+transform:scale(.6) rotate(-20deg);
+opacity:0;
+}
+
+to{
+transform:scale(1);
+opacity:1;
+}
+
+}
+
+h1{
+
+margin-top:25px;
+font-size:42px;
+text-align:center;
+font-weight:800;
+
+}
+
+p{
+
+text-align:center;
+margin-top:15px;
+color:#ddd;
+line-height:1.7;
+
+}
+
+.grid{
+
+margin-top:45px;
+
+display:grid;
+
+grid-template-columns:repeat(auto-fit,minmax(240px,1fr));
+
+gap:20px;
+
+}
+
+.btn{
+
+text-decoration:none;
+
+padding:18px;
+
+border-radius:18px;
+
+display:flex;
+
+align-items:center;
+
+justify-content:center;
+
+font-weight:600;
+
+font-size:17px;
+
+background:rgba(255,255,255,.08);
+
+color:white;
+
+transition:.35s;
+
+border:1px solid rgba(255,255,255,.15);
+
+position:relative;
+
+overflow:hidden;
+
+}
+
+.btn::before{
+
+content:'';
+
+position:absolute;
+
+left:-120%;
+
+top:0;
+
+width:100%;
+
+height:100%;
+
+background:rgba(255,255,255,.18);
+
+transform:skewX(-25deg);
+
+transition:.5s;
+
+}
+
+.btn:hover::before{
+
+left:120%;
+
+}
+
+.btn:hover{
+
+transform:translateY(-8px);
+
+background:#0A66FF;
+
+box-shadow:0 15px 35px rgba(10,102,255,.45);
+
+}
+
+.social{
+
+margin-top:40px;
+
+display:flex;
+
+justify-content:center;
+
+gap:15px;
+
+flex-wrap:wrap;
+
+}
+.social-name{
+    font-family: 'Inter', sans-serif;
+    margin-left: 8px;
+    font-size: 16px;
+    color: white;
+}
+
+.social a{
+
+width:60px;
+
+height:60px;
+
+border-radius:50%;
+
+display:flex;
+
+justify-content:center;
+
+align-items:center;
+
+background:rgba(255,255,255,.08);
+
+color:white;
+
+text-decoration:none;
+
+font-size:24px;
+
+transition:.35s;
+
+border:1px solid rgba(255,255,255,.15);
+
+}
+
+.social a:hover{
+
+transform:translateY(-8px) rotate(360deg);
+
+background:#0A66FF;
+
+}
+
+.footer{
+
+margin-top:35px;
+
+text-align:center;
+
+color:#bbb;
+
+font-size:15px;
+
+}
+
+.footer strong{
+
+color:white;
+
+}
+
+@media(max-width:600px){
+
+.card{
+
+padding:30px 22px;
+
+}
+
+h1{
+
+font-size:30px;
+
+}
+
+}
+
+</style>
+
+<script src="https://kit.fontawesome.com/6d2ea823d0.js" crossorigin="anonymous"></script>
+
+</head>
+
+<body>
+
+<div class="blob"></div>
+<div class="blob"></div>
+
+<div class="container">
+
+<div class="card">
+
+<img src="./assets/logo/logo-white.png" class="logo">
+
+<h1>Adinexis</h1>
+
+<p>
+Develop to Dominate
+<br><br>
+• Software Development • AI Solutions • Websites • Industry Solutions • Cloud Solutions
+</p>
+
+<div class="grid footer-social">
+
+<a class="btn" href="https://adinexis.com" target="_blank">
+    <i class="fa-solid fa-globe"></i>
+    <i class="social-name">Official Website</i>
+</a>
+
+<a class="btn" href="https://www.linkedin.com/company/adinexis" target="_blank">
+    <i class="fa-brands fa-linkedin"></i>
+    <i class="social-name">LinkedIn</i>
+</a>
+
+<a class="btn" href="https://instagram.com/adinexis" target="_blank">
+ <i class="fa-brands fa-instagram"></i>
+ <i class="social-name">Instagram</i>
+</a>
+
+<a class="btn" href="#" onclick="openBusinessEmail(); return false;">
+    <i class="fa-solid fa-envelope"></i>
+    <i class="social-name">Email Us</i>
+</a>
+
+
+<a class="btn" href="tel:+919409832410">
+    <i class="fa-solid fa-phone"></i>
+    <i class="social-name">Call Us</i>
+</a>
+
+<a class="btn" href="https://wa.me/919409832410">
+    <i class="fa-brands fa-whatsapp"></i>
+    <i class="social-name">WhatsApp</i>
+</a>
+
+<a class="btn" href="https://adinexis.com/contact">
+    <i class="fa-solid fa-rocket"></i>
+    <i class="social-name">Start Project</i>
+</a>
+
+</div>
+
+</body>
+</html>
